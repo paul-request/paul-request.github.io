@@ -1,6 +1,6 @@
 /*! main.css v1.0 | MIT License | Paul Bennett */
 
-$asset-path: "//assets.pmbennett.net"; 
+$asset-path: "/assets"; 
 
 $bg: #efe1c4;
 $dark: #222;
@@ -18,7 +18,7 @@ $screen: 992px;
 
 @mixin until($device-width) {
 	@media screen and (max-width: $device-width - 1) {
-		@content 
+		@content
 	}
 }
 
@@ -45,11 +45,11 @@ $screen: 992px;
 /* ==========================================================================
    General Styles
    ========================================================================== */
-  
+
 body {
 	background: $bg url(#{$asset-path}/noise.png) repeat 0 0;
 	border-top: 7px solid #000;
-	
+
 	@include until($phone-wide) {
 		font-size: 1em;
 	}
@@ -62,7 +62,7 @@ wrapper {
 	padding: 2% 0;
 	margin: 0 auto;
 	position: relative;
-	
+
 	@include until($screen) {
 		padding: 2%;
 		width: 96%;
@@ -73,7 +73,7 @@ wrapper {
 	padding: 0 0 2%;
 	margin: 0 auto;
 	position: relative;
-	
+
 	@include until($screen) {
 		padding: 0 2% 2% 2%;
 		width: 96%;
@@ -86,7 +86,7 @@ a {
 	display: inline-block;
 	padding: 0 3px;
 	@include roundcorners(2px);
-	
+
 	&:hover {
 		color: #fff;
 		background: $blue;
@@ -103,7 +103,7 @@ a {
 	float: left;
 	width: 47%;
 	margin: 0 6% 0 0;
-	
+
 	@include until($phone-wide) {
 		float: none;
 		width: 100%;
@@ -124,10 +124,10 @@ a {
 	border-bottom: 2px solid $blue_border;
 	border-top: 2px solid $blue_border;
 	color: #fff;
-	
+
 	a {
 		color: $light_blue;
-		
+
 		&:hover {
 			background: #fff;
 			color: $blue;
@@ -148,13 +148,13 @@ h1,h2 {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	
+
 	li {
 		padding: 0 0 0 20px;
 		background-image: url(#{$asset-path}/pmbSprite.png);
 		background-repeat: no-repeat;
 		background-position: -385px -247px;
-		
+
 		@include until($phone-wide) {
 			background-position: -385px -249px;
 		}
@@ -175,7 +175,7 @@ h4 {
 }
 h5 {
 	text-shadow: 1px 1px 1px #fff;
-}	
+}
 
 /* ==========================================================================
    Main Logo
@@ -184,14 +184,14 @@ h5 {
 .logo {
 	background: url(#{$asset-path}/retro_bg.jpg) no-repeat center 25px;
 	position: relative;
-	
+
 	h1 {
 		width: 216px;
 		height: 195px;
 		position: relative;
 		margin: -25px auto;
 		height: 182px;
-		
+
 		span {
 			width: 216px;
 			height: 195px;
@@ -203,7 +203,7 @@ h5 {
 			background-repeat: no-repeat;
 			background-position: 3px 0;
 			z-index: 10;
-			
+
 			@include until($phone-wide) {
 				background-position: -213px 0;
 			}
@@ -219,13 +219,13 @@ h5 {
 			text-indent: -9999em;
 			z-index: 11;
 			background: url(#{$asset-path}/pmbSprite.png) no-repeat 11px -182px;
-			
+
 			&:hover {
 				background: url(#{$asset-path}/pmbSprite.png) no-repeat 11px -182px;
 			}
 		}
 	}
-	
+
 	.spin {
 		span {
 			-webkit-animation: spin 1s infinite linear;
@@ -250,7 +250,7 @@ h5 {
 		font-size: 6em;
 		padding: 0;
 		text-shadow: 2px 2px 2px $red_shadow;
-		
+
 		@include until($phone-wide) {
 			font-size: 2em;
 			padding: 1em 0 0;
@@ -263,7 +263,7 @@ h5 {
 		text-shadow: 1px 1px 1px $red_shadow;
 		padding: 0 0 1em;
 		margin: 0;
-		
+
 		@include until($phone-wide) {
 			font-size: 1em;
 		}
@@ -284,7 +284,7 @@ h5 {
 .caseStudy {
 	margin-top: 300px;
 	position: relative;
-	
+
 	.caseStudyDesc {
 		opacity: 0;
 		position: absolute;
@@ -297,7 +297,7 @@ h5 {
 		transition: all 0.5s ease-in-out;
 		z-index: 5;
 		visibility: hidden;
-		
+
 		&.visible {
 			position: relative;
 			display: block;
@@ -306,19 +306,19 @@ h5 {
 			z-index: 8;
 		}
 	}
-	
+
 	.deviceBlock {
 		width: 820px;
 		height: 410px;
 		margin: 0 auto -250px;
 		position: relative;
 		top: -250px;
-		
+
 		img {
 			display: block;
 			margin: 0 auto;
 		}
-		
+
 		@include until($phone-wide) {
 			width: 100%;
 			height: 150px;
@@ -326,27 +326,27 @@ h5 {
 			top: -100px;
 		}
 	}
-	
+
 	h4 {
 		border-color: #fff;
 		color: #fff;
 		text-shadow: 2px 2px 2px $light_blue;
-		
+
 		@include until($phone-wide) {
 			padding-top: 1.25em;
 		}
 	}
-	
+
 	.star {
 		li {
 			background-position: -414px -214px;
-			
+
 			@include until($phone-wide) {
 				background-position: -414px -217px;
 			}
 		}
 	}
-	
+
 	.next, .prev {
 		display: block;
 		position: absolute;
@@ -354,42 +354,42 @@ h5 {
 		font-size: 6em;
 		line-height: 1em;
 		color: #fff;
-		text-shadow: 1px 1px 5px #000; 
+		text-shadow: 1px 1px 5px #000;
 		font-weight: bold;
 		top: 0;
 		text-decoration: none;
 		opacity: 0.7;
 		transition: opacity 0.4s ease-in-out;
-		
+
 		&:hover {
 			color: #fff;
 			text-decoration: none;
 			background: transparent;
 			opacity: 1;
 		}
-		
+
 		@include until($phone-wide) {
 			font-size: 4em;
 			top: 0.25em;
 		}
 	}
-	
+
 	.next {
 		right: 1%;
-		
+
 		@include until($phone-wide) {
 			right: 20%;
 		}
 	}
-	
+
 	.prev {
 		left: 1%;
-		
+
 		@include until($phone-wide) {
 			left: 20%;
 		}
 	}
-	
+
 	@include until($phone-wide) {
 		margin-top: 120px;
 	}
@@ -407,10 +407,10 @@ footer {
 		text-shadow: 1px 1px 1px #fff;
 		font-size: 1.25em;
 	}
-	
+
 	a {
 		color: $red;
-		
+
 		&:hover {
 			color: $red;
 			background: transparent;

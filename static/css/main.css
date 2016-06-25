@@ -16,7 +16,7 @@
    General Styles
    ========================================================================== */
 body {
-  background: #efe1c4 url(//assets.pmbennett.net/noise.png) repeat 0 0;
+  background: #efe1c4 url(/static/img/noise.png) repeat 0 0;
   border-top: 7px solid black; }
   @media screen and (max-width: 499px) {
     body {
@@ -78,12 +78,12 @@ a {
   margin-right: 0; }
 
 .themeBar {
-  background: #a9322a url(//assets.pmbennett.net/red_bg.jpg) repeat 0 0;
+  background: #a9322a url(/static/img/red_bg.jpg) repeat 0 0;
   border-bottom: 2px solid #9b221a;
   border-top: 2px solid #9b221a; }
 
 .altThemeBar {
-  background: #15474f url(//assets.pmbennett.net/blue_bg.jpg) repeat 0 0;
+  background: #15474f url(/static/img/blue_bg.jpg) repeat 0 0;
   border-bottom: 2px solid #15474f;
   border-top: 2px solid #15474f;
   color: #fff; }
@@ -106,7 +106,7 @@ a {
   list-style-type: none; }
   .star li {
     padding: 0 0 0 20px;
-    background-image: url(//assets.pmbennett.net/pmbSprite.png);
+    background-image: url(/static/img/pmbSprite.png);
     background-repeat: no-repeat;
     background-position: -385px -247px; }
     @media screen and (max-width: 499px) {
@@ -132,7 +132,7 @@ h5 {
    Main Logo
    ========================================================================== */
 .logo {
-  background: url(//assets.pmbennett.net/retro_bg.jpg) no-repeat center 25px;
+  background: url(/static/img/retro_bg.jpg) no-repeat center 25px;
   position: relative; }
   .logo h1 {
     width: 216px;
@@ -147,7 +147,7 @@ h5 {
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(//assets.pmbennett.net/pmbSprite.png);
+      background-image: url(/static/img/pmbSprite.png);
       background-repeat: no-repeat;
       background-position: 3px 0;
       z-index: 10; }
@@ -164,9 +164,9 @@ h5 {
       height: 195px;
       text-indent: -9999em;
       z-index: 11;
-      background: url(//assets.pmbennett.net/pmbSprite.png) no-repeat 11px -182px; }
+      background: url(/static/img/pmbSprite.png) no-repeat 11px -182px; }
       .logo h1 a:hover {
-        background: url(//assets.pmbennett.net/pmbSprite.png) no-repeat 11px -182px; }
+        background: url(/static/img/pmbSprite.png) no-repeat 11px -182px; }
   .logo .spin span {
     -webkit-animation: spin 1s infinite linear;
     -moz-animation: spin 1s infinite linear;
