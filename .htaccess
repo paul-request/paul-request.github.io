@@ -1,0 +1,35 @@
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+ 
+# Set up caching on media files for 1 year (forever?)
+<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav|woff|ttf|eot)$">
+ExpiresDefault A29030400
+Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+ 
+# Set up caching on media files for 2 week
+<FilesMatch "\.(gif|jpg|jpeg|png|swf|txt|shtml|html|js|css)$">
+ExpiresDefault A1209600
+Header set Cache-Control "max-age=12096000, public"
+</FilesMatch>
+
+# Remove eTag header
+Header unset ETag
+FileETag None
+
+# cross-orgin policy fix for fonts
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "http://pmbennett.net"
+    </IfModule>
+</FilesMatch>
+
+# Add gzip compression
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/octet-stream
